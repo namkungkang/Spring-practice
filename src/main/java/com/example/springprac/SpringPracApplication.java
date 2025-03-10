@@ -5,9 +5,15 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 public class SpringPracApplication {
-
+   public static int plus() {
+         int r = 10;
+         int g = 20;
+         return r+g;
+    }
     public static void main(String[] args) {
         SpringApplication.run(SpringPracApplication.class, args);
+        int result = plus();
+        System.out.println(result);
 
         final int a = 10;
         System.out.println(a);
