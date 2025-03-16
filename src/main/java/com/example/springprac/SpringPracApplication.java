@@ -10,7 +10,7 @@ public class SpringPracApplication {
 
     public static void main(String[] args) {
 
-
+        System.out.println("dfdd");
         SpringApplication.run(SpringPracApplication.class, args);
 }
 
