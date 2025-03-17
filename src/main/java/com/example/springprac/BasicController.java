@@ -3,16 +3,29 @@ package com.example.springprac;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.ResponseStatus;
 
-
+import java.time.LocalDateTime;
 
 
 @Controller
 public class BasicController {
     @GetMapping
-    @ResponseBody
     String hello() {
-        return "hello";
+        return "index.html";
     }
-
+    @GetMapping("/about")
+    @ResponseBody
+    String hi() {
+        return "요약사이트";
+    }
+    @GetMapping("/mypage")
+    @ResponseBody
+    String hh() {
+        return "마이페이지이다";
+    }
+    @GetMapping("/date")
+    String hs() {
+        return ZoneDateTime.now().toString();
+    }
 }
