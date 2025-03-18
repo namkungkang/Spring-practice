@@ -3,8 +3,7 @@ package com.example.springprac;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.ResponseStatus;
-
+import org.springframework.ui.Model;
 import java.time.LocalDateTime;
 
 
@@ -28,4 +27,11 @@ public class BasicController {
     String hs() {
         return LocalDateTime.now().toString();
     }
+    @GetMapping("/list")
+    String list(Model model) {
+        model.addAttribute("name","나나나");
+        return "list.html";
+    }
+
+
 }
