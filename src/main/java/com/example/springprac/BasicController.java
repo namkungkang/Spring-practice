@@ -26,6 +26,6 @@ public class BasicController {
     }
     @GetMapping("/date")
     String hs() {
-        return ZoneDateTime.now().toString();
+        return LocalDateTime.now().toString();
     }
 }
