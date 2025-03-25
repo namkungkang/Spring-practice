@@ -27,11 +27,7 @@ public class BasicController {
     String hs() {
         return LocalDateTime.now().toString();
     }
-    @GetMapping("/list")
-    String list(Model model) {
-        model.addAttribute("name","나나나");
-        return "list.html";
-    }
+
 
 
 
